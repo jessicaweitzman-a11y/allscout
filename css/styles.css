@@ -187,7 +187,7 @@ nav.scrolled {
 }
 .type-line {
   display: block;
-  min-height: 2.4em;
+  min-height: 1.2em;
   width: 100%;
 }
 .ellipsis {
@@ -201,10 +201,10 @@ nav.scrolled {
   content: '';
   display: inline-block;
   width: 2px;
-  height: 0.75em;
+  height: 0.85em;
   background: var(--purple);
   margin-left: 3px;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   border-radius: 2px;
   animation: blink 1s step-end infinite;
 }
