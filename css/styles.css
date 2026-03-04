@@ -182,10 +182,16 @@ nav.scrolled {
 .hero h1 {
   font-size:clamp(38px,5.5vw,72px);
   font-weight:700; line-height:1.06; letter-spacing:-2px; margin-bottom:22px;
+  text-align: left;
+  width: 100%;
 }
 .type-line {
   display: block;
   min-height: 1.2em;
+  width: 100%;
+}
+#typeTarget {
+  display: inline-block;
 }
 .hero-sub {
   font-size:clamp(16px,1.8vw,18px);
