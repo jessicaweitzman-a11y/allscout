@@ -627,10 +627,11 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
 .faq-item.open .faq-a { max-height:320px; padding-bottom:22px; }
 
 /* ---- CONTACT PAGE ---- */
-.contact-section { padding:160px 0 120px; background:var(--lt); }
+.contact-section { padding:80px 0 120px; background:var(--lt); }
 .contact-grid { display:grid; grid-template-columns:1fr 1.7fr; gap:80px; align-items:start; }
-.contact-info h1 { font-size:clamp(30px,4vw,48px); font-weight:700; line-height:1.12; margin-bottom:16px; color:var(--lt-text); }
+.contact-info h2 { font-size:clamp(22px,3vw,32px); font-weight:700; line-height:1.15; margin-bottom:12px; color:var(--lt-text); }
 .contact-info > p { font-size:16px; color:var(--lt-muted); line-height:1.75; margin-bottom:40px; }
+.contact-item { display:flex; align-items:center; gap:14px; font-size:15px; color:var(--lt-muted); }
 .contact-details { display:flex; flex-direction:column; gap:16px; }
 .contact-item { display:flex; align-items:center; gap:14px; font-size:15px; color:var(--lt-muted); }
 .contact-icon {

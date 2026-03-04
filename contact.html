@@ -27,8 +27,8 @@
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="contact.html" class="btn btn-ghost">Log In</a>
-          <a href="contact.html" class="btn btn-primary">Get Started</a>
+          
+          <a href="contact.html" class="btn btn-primary">Get AllScout</a>
         </div>
         <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -43,8 +43,15 @@
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="pricing.html" onclick="closeMenu()">Pricing</a>
     <a href="contact.html" onclick="closeMenu()">Contact</a>
-    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get Started</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get AllScout</a>
   </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <h1>Let's get you <span class="gradient-text">set up.</span></h1>
+    <p>Whether you want early access, have a question, or are interested in an enterprise plan — we'd love to hear from you.</p>
+  </section>
 
   <!-- CONTACT SECTION -->
   <section class="contact-section">
@@ -52,10 +59,10 @@
       <div class="contact-grid">
 
         <!-- LEFT: Info -->
-        <div class="fade-in">
-          <img src="assets/contact.png" alt="AllScout" style="height:48px;width:auto;margin-bottom:32px;">
-          <h1>Let's get you<br><span class="gradient-text">set up.</span></h1>
-          <p>Whether you want early access, have a question about the product, or are interested in an enterprise plan — we'd love to hear from you.</p>
+        <div class="contact-info fade-in">
+          <h2>Get in touch</h2>
+          <p>Fill out the form and we'll be in touch shortly. Typically within 24 hours.</p>
+
           <div class="contact-details">
             <div class="contact-item">
               <div class="contact-icon">✉️</div>
@@ -71,18 +78,18 @@
             </div>
           </div>
 
-          <!-- App store links below contact details -->
+          <!-- App store links -->
           <div style="margin-top:40px;">
-            <p style="font-size:14px;color:var(--lt-muted);margin-bottom:16px;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Download the app</p>
+            <p style="font-size:12px;color:var(--lt-muted);margin-bottom:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Download the app</p>
             <div class="store-badges" style="flex-direction:column;">
-              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.08);border-color:rgba(91,76,255,0.2);">
+              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.06);border-color:rgba(91,76,255,0.18);">
                 <span class="store-badge-icon">🍎</span>
                 <div class="store-badge-text">
                   <small>Download on the</small>
                   <strong>App Store</strong>
                 </div>
               </a>
-              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.08);border-color:rgba(91,76,255,0.2);">
+              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.06);border-color:rgba(91,76,255,0.18);">
                 <span class="store-badge-icon">▶</span>
                 <div class="store-badge-text">
                   <small>Get it on</small>
@@ -96,7 +103,7 @@
         <!-- RIGHT: Form -->
         <div class="form-card fade-in" style="transition-delay:.15s">
           <h2 style="font-size:22px;font-weight:700;color:var(--lt-text);margin-bottom:6px;">Send us a message</h2>
-          <p style="font-size:14px;color:var(--lt-muted);margin-bottom:32px;">Fill out the form and we'll be in touch shortly.</p>
+          <p style="font-size:14px;color:var(--lt-muted);margin-bottom:32px;">We read every message and respond personally.</p>
 
           <form id="contactForm" onsubmit="handleSubmit(event)">
             <div class="form-row-2">
@@ -125,7 +132,7 @@
               <select id="reason" name="reason">
                 <option value="">Select a topic</option>
                 <option value="early-access">Request early access</option>
-                <option value="pricing">Pricing & Plans</option>
+                <option value="pricing">Pricing & plans</option>
                 <option value="enterprise">Enterprise inquiry</option>
                 <option value="support">Technical support</option>
                 <option value="partnership">Partnership</option>
@@ -163,7 +170,7 @@
         <div class="footer-col">
           <h4>Product</h4>
           <ul>
-            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#how-it-works">How it works</a></li>
             <li><a href="index.html#features">Features</a></li>
             <li><a href="pricing.html">Pricing</a></li>
           </ul>
