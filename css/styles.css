@@ -190,6 +190,10 @@ nav.scrolled {
   min-height: 1.2em;
   width: 100%;
 }
+.ellipsis {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
 #typeTarget {
   display: inline-block;
 }
