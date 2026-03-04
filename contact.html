@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — AllScout</title>
+  <meta name="description" content="Get in touch with the AllScout team or request early access.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/AllSccout white.svg" alt="AllScout">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-ghost">Log In</a>
+          <a href="contact.html" class="btn btn-primary">Get Started</a>
+        </div>
+        <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileMenu">
+    <button class="mobile-nav-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get Started</a>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div class="fade-in">
+          <img src="assets/contact.png" alt="AllScout" style="height:48px;width:auto;margin-bottom:32px;">
+          <h1>Let's get you<br><span class="gradient-text">set up.</span></h1>
+          <p>Whether you want early access, have a question about the product, or are interested in an enterprise plan — we'd love to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              hello@allscout.co
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              San Francisco, CA
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💬</div>
+              Typically reply within 24 hours
+            </div>
+          </div>
+
+          <!-- App store links below contact details -->
+          <div style="margin-top:40px;">
+            <p style="font-size:14px;color:var(--lt-muted);margin-bottom:16px;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Download the app</p>
+            <div class="store-badges" style="flex-direction:column;">
+              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.08);border-color:rgba(91,76,255,0.2);">
+                <span class="store-badge-icon">🍎</span>
+                <div class="store-badge-text">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="store-badge" style="background:rgba(91,76,255,0.08);border-color:rgba(91,76,255,0.2);">
+                <span class="store-badge-icon">▶</span>
+                <div class="store-badge-text">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="form-card fade-in" style="transition-delay:.15s">
+          <h2 style="font-size:22px;font-weight:700;color:var(--lt-text);margin-bottom:6px;">Send us a message</h2>
+          <p style="font-size:14px;color:var(--lt-muted);margin-bottom:32px;">Fill out the form and we'll be in touch shortly.</p>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp">
+            </div>
+
+            <div class="form-group">
+              <label for="reason">What can we help with?</label>
+              <select id="reason" name="reason">
+                <option value="">Select a topic</option>
+                <option value="early-access">Request early access</option>
+                <option value="pricing">Pricing & Plans</option>
+                <option value="enterprise">Enterprise inquiry</option>
+                <option value="support">Technical support</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you're trying to detect, or any questions you have…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+              Send message →
+            </button>
+
+            <div id="formSuccess" style="display:none;margin-top:20px;padding:16px;background:rgba(38,185,249,0.08);border:1px solid rgba(38,185,249,0.25);border-radius:10px;font-size:14px;color:var(--lt-text);text-align:center;">
+              ✅ Message sent! We'll be in touch within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="assets/AllSccout white.svg" alt="AllScout"></a>
+          <p>Computer vision detection for everyday cameras. Simple text prompts, real-time results.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AllScout. All rights reserved.</span>
+        <span>Powered by computer vision</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      e.target.querySelector('[type=submit]').textContent = 'Sent!';
+      e.target.querySelector('[type=submit]').disabled = true;
+    }
+  </script>
+</body>
+</html>

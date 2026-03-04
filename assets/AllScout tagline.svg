@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 699.57 183.04">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: SpaceGrotesk-Regular, 'Space Grotesk';
+        font-size: 21px;
+      }
+
+      .cls-2 {
+        font-family: SpaceGrotesk-Bold, 'Space Grotesk';
+        font-size: 141.61px;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        font-family: NextExitVariable-Regular, 'NextExit Variable';
+        font-size: 13.06px;
+        font-variation-settings: 'wght' 400, 'ROUN' 0;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: url(#linear-gradient-2);
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="95.49" x2="165.62" y2="95.49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6400ff"/>
+      <stop offset="1" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="91.01" y1="89.77" x2="111.41" y2="110.17" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-2" transform="translate(188.35 120.37)"><tspan x="0" y="0">AllScout</tspan></text>
+    <text class="cls-1" transform="translate(190.15 157.33)"><tspan x="0" y="0">YOUR NATIVE VISION AI.</tspan></text>
+    <text class="cls-4" transform="translate(156.61 13.63)"><tspan x="0" y="0">TM</tspan></text>
+    <path class="cls-3" d="M165.62,41.92v83.25c0,18.77-15.21,33.99-33.98,33.99H23.88L0,183.04V41.92C0,23.15,15.21,7.94,33.98,7.94h97.65c18.77,0,33.98,15.21,33.98,33.98Z"/>
+    <circle class="cls-5" cx="84.29" cy="83.55" r="43.41"/>
+    <path class="cls-6" d="M72.46,113.27c11.77,6.14,26.63,4.27,36.52-5.62,9.79-9.79,11.72-24.45,5.8-36.16"/>
+  </g>
+</svg>

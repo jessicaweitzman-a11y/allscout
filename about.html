@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — AllScout</title>
+  <meta name="description" content="Learn about AllScout's mission to make computer vision accessible to everyone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/AllSccout white.svg" alt="AllScout">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-ghost">Log In</a>
+          <a href="contact.html" class="btn btn-primary">Get Started</a>
+        </div>
+        <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileMenu">
+    <button class="mobile-nav-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get Started</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <h1>We believe your cameras<br>should <span class="gradient-text">work for you</span></h1>
+    <p>AllScout was built on a simple idea: the cameras you already own are powerful enough — they just need the intelligence to match.</p>
+  </section>
+
+  <!-- MISSION -->
+  <section class="about-mission">
+    <div class="container">
+      <div class="about-split">
+        <div class="fade-in">
+          <div class="section-label">Our Mission</div>
+          <h2>Making computer vision accessible to everyone</h2>
+          <p>Computer vision has historically required expensive hardware, custom machine learning models, and dedicated engineering teams. We set out to change that.</p>
+          <p>AllScout gives anyone — regardless of technical background — the ability to point a camera at a problem and describe what they want to detect. Our Vision AI Agent handles the rest.</p>
+          <p>Whether you're monitoring your front door, a parking lot, a factory floor, or a swimming pool, AllScout turns your existing cameras into an intelligent detection system with nothing more than a text prompt.</p>
+        </div>
+        <div class="about-visual fade-in" style="transition-delay:.15s;">
+          <img src="assets/AllScout tagline.svg" alt="AllScout — Your Native Vision AI" style="width:75%;height:auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="about-values">
+    <div class="container">
+      <div class="section-label">Our Values</div>
+      <h2 class="section-title dark">What drives us</h2>
+      <div class="values-grid">
+        <div class="value-card fade-in">
+          <div class="vi">🎯</div>
+          <h3>Simplicity first</h3>
+          <p>If you can describe it, you can detect it. We obsess over making complex technology feel effortless for our users.</p>
+        </div>
+        <div class="value-card fade-in" style="transition-delay:.1s">
+          <div class="vi">🔒</div>
+          <h3>Privacy by design</h3>
+          <p>Your camera feeds are yours. We process video with strict privacy controls and never store footage without your explicit consent.</p>
+        </div>
+        <div class="value-card fade-in" style="transition-delay:.2s">
+          <div class="vi">⚡</div>
+          <h3>Real-time or nothing</h3>
+          <p>Delayed alerts are useless alerts. Our infrastructure is built for low-latency detection so you can act on what matters, when it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="about-team">
+    <div class="container">
+      <div class="section-label">The Team</div>
+      <h2 class="section-title dark">Built by people who care</h2>
+      <p class="section-sub dark">AllScout was founded by a team with backgrounds in computer vision, mobile engineering, and product design.</p>
+      <div class="team-grid">
+        <div class="team-card fade-in">
+          <div class="team-avatar">AK</div>
+          <h3>Alex Kim</h3>
+          <span class="role">Co-founder & CEO</span>
+        </div>
+        <div class="team-card fade-in" style="transition-delay:.1s">
+          <div class="team-avatar">SR</div>
+          <h3>Sofia Rodriguez</h3>
+          <span class="role">Co-founder & CTO</span>
+        </div>
+        <div class="team-card fade-in" style="transition-delay:.2s">
+          <div class="team-avatar">MC</div>
+          <h3>Marcus Chen</h3>
+          <span class="role">Head of Computer Vision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to join us?</h2>
+        <p>AllScout is in early access. We're working with a select group of users to shape the product.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Request early access</a>
+          <a href="pricing.html" class="btn btn-ghost">View pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="assets/AllSccout white.svg" alt="AllScout"></a>
+          <p>Computer vision detection for everyday cameras. Simple text prompts, real-time results.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AllScout. All rights reserved.</span>
+        <span>Powered by computer vision</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

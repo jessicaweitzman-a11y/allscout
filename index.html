@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AllScout — Alert me when...</title>
+  <meta name="description" content="AllScout uses computer vision to transform everyday cameras into an intelligent detection system. Just describe what to detect in plain English.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/AllSccout white.svg" alt="AllScout">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-ghost">Log In</a>
+          <a href="contact.html" class="btn btn-primary">Get started</a>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileMenu">
+    <button class="mobile-nav-close" onclick="closeMenu()" aria-label="Close menu">✕</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get started</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <div class="badge-dot"></div>
+            Your Vision AI agent
+          </div>
+          <h1>Alert me when<br><span class="type-line"><span class="gradient-text" id="typeTarget"></span><span class="type-cursor"></span></span></h1>
+          <p class="hero-sub">AllScout connects to the cameras you already use and turns them into an intelligent AI agent. Just describe what you want it to detect and get alerted when it happens.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Get early access →</a>
+            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+          </div>
+          <div class="store-badges">
+            <a href="#" class="store-badge">
+              <span class="store-badge-icon">🍎</span>
+              <div class="store-badge-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            <a href="#" class="store-badge">
+              <span class="store-badge-icon">▶</span>
+              <div class="store-badge-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone mockups — place app screenshots in assets/ folder -->
+        <div class="phones-wrap fade-in" style="transition-delay:.2s">
+          <div class="phone-mockup back">
+            <img src="assets/screen-alerts.png" alt="AllScout Alerts">
+          </div>
+          <div class="phone-mockup front">
+            <img src="assets/Screen-agent.png" alt="AllScout Agent">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS BAR -->
+  <div class="logos-bar">
+    <div class="container">
+      <p class="logos-bar-label">Works with your existing cameras</p>
+      <div class="logos-row">
+        <span class="logo-pill">Ring</span>
+        <span class="logo-pill">Nest</span>
+        <span class="logo-pill">Arlo</span>
+        <span class="logo-pill">Hikvision</span>
+        <span class="logo-pill">Reolink</span>
+        <span class="logo-pill">Any RTSP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI AGENT FEATURE -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="agent-layout">
+        <div class="agent-phone fade-in">
+          <img src="assets/Screen-agent.png" alt="AllScout Agent">
+        </div>
+        <div class="agent-text fade-in" style="transition-delay:.15s">
+          <div class="hero-badge" style="margin-bottom:20px;">
+            <div class="badge-dot"></div>
+            AllScout Agent
+          </div>
+          <h2>Describe it.<br>We'll <span class="gradient-text">detect it.</span></h2>
+          <p>No complicated setup. No endless motion alerts. Just tell AllScout what matters to you and it will figure out the rest.</p>
+          <p>AllScout understands your cameras and watches for exactly what you describe.</p>
+          <div class="prompt-examples">
+            <div class="prompt-chip">
+              <span class="prompt-chip-icon">💬</span>
+              "Alert me when my son arrives home"
+            </div>
+            <div class="prompt-chip">
+              <span class="prompt-chip-icon">💬</span>
+              "Alert me when a window has been left open"
+            </div>
+            <div class="prompt-chip">
+              <span class="prompt-chip-icon">💬</span>
+              "Alert me when a package is delivered"
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Try It Free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title dark">Three steps to smarter cameras</h2>
+      <p class="section-sub dark">No hardware upgrades. No machine learning expertise. Just connect, describe, and stay informed.</p>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-num">01</div>
+          <h3>Connect your camera</h3>
+          <p>Add any IP camera, Ring, Nest, Arlo, or RTSP stream. AllScout works with the cameras you already own — no new hardware needed.</p>
+        </div>
+        <div class="step-card fade-in" style="transition-delay:.1s">
+          <div class="step-num">02</div>
+          <h3>Describe what to detect</h3>
+          <p>Use the AllScout Agent to describe detections in plain English. Or choose from ready-made alerts like package delivery, license plates, and more.</p>
+        </div>
+        <div class="step-card fade-in" style="transition-delay:.2s">
+          <div class="step-num">03</div>
+          <h3>Get instant alerts</h3>
+          <p>Receive real-time notifications with a screenshot the moment something is detected. View your full alert history anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALERTS SHOWCASE -->
+  <section class="alerts-section">
+    <div class="container">
+      <div class="alerts-layout">
+        <div class="fade-in">
+          <div class="section-label">Smart Alerts</div>
+          <h2 class="section-title">Built-in alerts for<br><span class="gradient-text">common scenarios</span></h2>
+          <p class="section-sub">Choose from AllScout's pre-built alert library — or build your own with the AI Agent. Either way, you're covered.</p>
+          <div class="alerts-chips">
+            <div class="alert-chip">
+              <div class="alert-chip-icon">📦</div>
+              <div class="alert-chip-text">
+                <strong>Package alert</strong>
+                <span>Know when deliveries arrive or go missing</span>
+              </div>
+              <span class="alert-chip-badge badge-blue">Built-in</span>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🚗</div>
+              <div class="alert-chip-text">
+                <strong>License plate recognition</strong>
+                <span>Alert when specific vehicles are spotted</span>
+              </div>
+              <span class="alert-chip-badge badge-blue">Built-in</span>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🅿️</div>
+              <div class="alert-chip-text">
+                <strong>Parking vacancy</strong>
+                <span>Monitor your parking space 24/7</span>
+              </div>
+              <span class="alert-chip-badge badge-purple">Built-in</span>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🔥</div>
+              <div class="alert-chip-text">
+                <strong>Fire & smoke detection</strong>
+                <span>Critical safety alerts for fire or smoke</span>
+              </div>
+              <span class="alert-chip-badge badge-purple">Built-in</span>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">💬</div>
+              <div class="alert-chip-text">
+                <strong>Custom alert</strong>
+                <span>"Alert me when my son arrives home…"</span>
+              </div>
+              <span class="alert-chip-badge badge-custom">AI Agent</span>
+            </div>
+          </div>
+        </div>
+        <div class="alerts-phone fade-in" style="transition-delay:.2s">
+          <img src="assets/Screen-settings.png" alt="AllScout Alert Settings">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="agent-layout">
+        <div class="agent-phone fade-in">
+          <img src="assets/WhatsApp Image 2026-03-03 at 22.23.01.jpeg" alt="AllScout business analytics">
+        </div>
+        <div class="agent-text fade-in" style="transition-delay:.15s">
+          <div class="hero-badge" style="margin-bottom:20px;">
+            <div class="badge-dot"></div>
+            For business
+          </div>
+          <h2>Built for your <span class="gradient-text">business cameras too.</span></h2>
+          <p>AllScout works just as well in a commercial setting. Connect the cameras you already have at your business and detect what matters most — automatically.</p>
+          <div class="alerts-chips" style="margin-top:28px;">
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🏪</div>
+              <div class="alert-chip-text">
+                <strong>Store traffic</strong>
+                <span>Track footfall and peak hours in real time</span>
+              </div>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🧍</div>
+              <div class="alert-chip-text">
+                <strong>Customer loitering</strong>
+                <span>Get alerted when someone lingers too long</span>
+              </div>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">📊</div>
+              <div class="alert-chip-text">
+                <strong>Line & queue count</strong>
+                <span>Monitor queue length and average wait times</span>
+              </div>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🔥</div>
+              <div class="alert-chip-text">
+                <strong>Fire & smoke detection</strong>
+                <span>Critical safety alerts the moment it's detected</span>
+              </div>
+            </div>
+            <div class="alert-chip">
+              <div class="alert-chip-icon">🪟</div>
+              <div class="alert-chip-text">
+                <strong>Open windows & water damage</strong>
+                <span>Catch property issues before they escalate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="how-it-works" id="pricing">
+    <div class="container">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title dark">Flexible monthly plans</h2>
+      <p class="section-sub dark">Get a set number of detections each month. Upgrade anytime as your needs grow.</p>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-tier">Starter</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">2.99</span>
+          </div>
+          <p class="price-desc">Perfect for light use or getting started.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>2,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email & push notifications</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Get started</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0015 per detection</p>
+        </div>
+
+        <div class="pricing-card featured fade-in" style="transition-delay:.1s">
+          <div class="featured-badge">Best value</div>
+          <div class="pricing-tier">Standard</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">7.99</span>
+          </div>
+          <p class="price-desc">Great for home monitoring across multiple cameras.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>7,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email, SMS & push notifications</li>
+            <li>License plate recognition</li>
+            <li>Image Bank (face detection)</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Standard</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0011 per detection</p>
+        </div>
+
+        <div class="pricing-card fade-in" style="transition-delay:.2s">
+          <div class="pricing-tier">Pro</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">13.99</span>
+          </div>
+          <p class="price-desc">For heavy users with high-frequency detection needs.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>15,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email, SMS & push notifications</li>
+            <li>License plate recognition</li>
+            <li>Image Bank (face detection)</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-purple" style="width:100%;justify-content:center;">Get Pro</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0009 per detection</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>The smarter way to<br><span class="gradient-text">stay in the know.</span></h2>
+        <p>Join early-access users who rely on AllScout to detect what matters — the moment it happens.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Request early access</a>
+          <a href="pricing.html" class="btn btn-ghost">View pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/AllSccout white.svg" alt="AllScout">
+          </a>
+          <p>Computer vision detection for everyday cameras. Simple text prompts, real-time results.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AllScout. All rights reserved.</span>
+        <span>Powered by computer vision</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — AllScout</title>
+  <meta name="description" content="Simple, transparent pricing for AllScout's computer vision detection platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/AllSccout white.svg" alt="AllScout">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-ghost">Log In</a>
+          <a href="contact.html" class="btn btn-primary">Get started</a>
+        </div>
+        <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileMenu">
+    <button class="mobile-nav-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get started</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <h1>Simple, transparent <span class="gradient-text">pricing</span></h1>
+    <p>Buy detections as you need them. No subscriptions, no hidden fees — just pay for what you use.</p>
+  </section>
+
+  <!-- PRICING GRID -->
+  <section class="pricing-section">
+    <div class="container">
+      <!-- What counts as a detection -->
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-size:14px;color:var(--lt-muted);background:var(--lt-2);border:1px solid var(--lt-border);border-radius:100px;display:inline-block;padding:8px 20px;">
+          1 detection = 1 time AllScout checks your camera for a match
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- STARTER -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-tier">Starter</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">2.99</span>
+          </div>
+          <p class="price-desc">Perfect for light use — monitoring a single camera or testing the platform.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>2,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email & push notifications</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Get started</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0015 per detection</p>
+        </div>
+
+        <!-- STANDARD — FEATURED -->
+        <div class="pricing-card featured fade-in" style="transition-delay:.1s">
+          <div class="featured-badge">Best value</div>
+          <div class="pricing-tier">Standard</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">7.99</span>
+          </div>
+          <p class="price-desc">Great for home monitoring across multiple cameras and alert types.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>7,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email, SMS & push notifications</li>
+            <li>License plate recognition</li>
+            <li>Image Bank (face detection)</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Standard</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0011 per detection</p>
+        </div>
+
+        <!-- PRO -->
+        <div class="pricing-card fade-in" style="transition-delay:.2s">
+          <div class="pricing-tier">Pro</div>
+          <div class="price-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-amount">13.99</span>
+          </div>
+          <p class="price-desc">For heavy users with multiple cameras and high-frequency detection needs.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>15,000 detections</li>
+            <li>All built-in AllScout alerts</li>
+            <li>AllScout Agent (custom prompts)</li>
+            <li>Alert history with screenshots</li>
+            <li>Email, SMS & push notifications</li>
+            <li>License plate recognition</li>
+            <li>Image Bank (face detection)</li>
+          </ul>
+          <a href="contact.html" class="btn btn-purple" style="width:100%;justify-content:center;">Get Pro</a>
+          <p style="text-align:center;font-size:12px;color:var(--lt-muted);margin-top:14px;">$0.0009 per detection</p>
+        </div>
+
+      </div>
+
+      <!-- Need more -->
+      <div style="text-align:center;margin-top:48px;color:var(--lt-muted);font-size:15px;">
+        Need more detections? <a href="contact.html" style="color:var(--purple);font-weight:600;">Contact us for a custom plan →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title dark">Common questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What exactly counts as a detection?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">One detection is one time AllScout checks your camera feed against an alert condition. For example, if you have an alert set to check every 30 seconds, that uses 2 detections per minute. You're in full control of how frequently checks run.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What cameras does AllScout support?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">AllScout works with any IP camera, RTSP stream, or popular smart home cameras including Ring, Nest, Arlo, Hikvision, and Reolink. If it produces a video stream, AllScout can work with it.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What is the AllScout Agent?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">The AllScout Agent is your personal Vision AI. Instead of picking from a fixed list of alerts, you simply type what you want to detect — "alert me when my son arrives" or "alert me when a window is left open" — and the Agent configures the detection for you automatically.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            How does the Image Bank work?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">Add photos of people you know — family members, regular visitors, employees — and AllScout will alert you whenever those specific people appear on your cameras. You can also use it to detect unknown faces.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Is my video footage stored?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">AllScout only stores individual frames (screenshots) at the moment a detection occurs, not continuous video recordings. Your live camera stream is processed in real-time and not saved to our servers. You can read our full Privacy Policy for details.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Do detections expire?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">No — your detections never expire. Buy a pack when you need it and use them at your own pace. There are no subscriptions or recurring charges.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Can I buy more detections at any time?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-a">Yes. You can top up your detections at any time from within the app. Any unused detections from a previous purchase carry over and stack with your new ones.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Start detecting what matters,<br><span class="gradient-text">today.</span></h2>
+        <p>Set up in minutes. No hardware changes. No engineering required.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Get started free</a>
+          <a href="contact.html" class="btn btn-ghost">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="assets/AllSccout white.svg" alt="AllScout"></a>
+          <p>Computer vision detection for everyday cameras. Simple text prompts, real-time results.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AllScout. All rights reserved.</span>
+        <span>Powered by computer vision</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 699.57 180.51">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: SpaceGrotesk-Bold, 'Space Grotesk';
+        font-size: 141.61px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        font-family: NextExitVariable-Regular, 'NextExit Variable';
+        font-size: 13.06px;
+        font-variation-settings: 'wght' 400, 'ROUN' 0;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: url(#linear-gradient-2);
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="92.38" x2="165.62" y2="92.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6400ff"/>
+      <stop offset="1" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="91.01" y1="86.66" x2="111.41" y2="107.06" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-1" transform="translate(188.35 130.8)"><tspan x="0" y="0">AllScout</tspan></text>
+    <text class="cls-3" transform="translate(156.61 10.51)"><tspan x="0" y="0">TM</tspan></text>
+    <path class="cls-2" d="M165.62,38.81v83.25c0,18.77-15.21,33.99-33.98,33.99H23.88L0,179.93V38.81C0,20.04,15.21,4.83,33.98,4.83h97.65c18.77,0,33.98,15.21,33.98,33.98Z"/>
+    <circle class="cls-4" cx="84.29" cy="80.43" r="43.41"/>
+    <path class="cls-5" d="M72.46,110.15c11.77,6.14,26.63,4.27,36.52-5.62,9.79-9.79,11.72-24.45,5.8-36.16"/>
+  </g>
+</svg>
