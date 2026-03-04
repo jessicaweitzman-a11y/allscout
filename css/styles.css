@@ -592,13 +592,14 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
 
 .pricing-grid {
   display:grid; grid-template-columns:repeat(3,1fr);
-  gap:22px; margin-top:60px; align-items:start;
+  gap:22px; margin-top:60px; align-items:stretch;
 }
 .pricing-card {
   padding:38px 30px;
   background:var(--lt); border:1.5px solid var(--lt-border);
   border-radius:var(--r-xl); position:relative;
   transition: border-color .3s, transform .3s, box-shadow .3s;
+  display:flex; flex-direction:column;
 }
 .pricing-card:hover { border-color:#c0bfec; transform:translateY(-4px); box-shadow:0 16px 48px rgba(91,76,255,0.1); }
 .pricing-card.featured { border-color:var(--purple); background:linear-gradient(160deg,rgba(38,185,249,0.03),rgba(91,76,255,0.05)); }
@@ -615,7 +616,7 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
 .price-period { font-size:14px; color:var(--lt-muted); margin-left:4px; margin-bottom:6px; }
 .price-desc { font-size:14px; color:var(--lt-muted); line-height:1.65; margin-bottom:28px; min-height:44px; }
 .pricing-divider { height:1px; background:var(--lt-border); margin-bottom:22px; }
-.pricing-features { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
+.pricing-features { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; flex:1; }
 .pricing-features li { display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--lt-muted); }
 .pricing-features li::before { content:'✓'; color:var(--purple); font-weight:700; flex-shrink:0; margin-top:1px; }
 .pricing-features li.off { opacity:0.4; }
