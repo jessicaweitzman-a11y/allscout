@@ -130,7 +130,15 @@
           <div class="phone-frame">
             <div class="phone-island"><div class="phone-island-dot"></div></div>
             <div class="phone-screen">
-              <video src="assets/Raw%20Videos/Amazon%20delivery%20detection.mp4" autoplay muted loop playsinline poster="assets/AllScout screens for video/Alerts-1.png"></video>
+              <video id="agentVideo" src="assets/Raw%20Videos/PackageScout3.mp4" autoplay muted playsinline poster="assets/AllScout screens for video/Alerts-1.png"></video>
+              <script>
+                (function(){
+                  var v = document.getElementById('agentVideo');
+                  var s = 30, e = 52;
+                  v.addEventListener('loadedmetadata', function(){ v.currentTime = s; });
+                  v.addEventListener('timeupdate', function(){ if (v.currentTime >= e) { v.currentTime = s; } });
+                })();
+              </script>
             </div>
           </div>
         </div>
