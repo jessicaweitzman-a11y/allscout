@@ -214,6 +214,7 @@ nav.scrolled {
   color:var(--text-muted); line-height:1.75; margin-bottom:40px; max-width:480px;
 }
 .hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+.hero-actions .btn { padding:12px 24px; font-size:15px; }
 
 /* Store badges */
 .store-badges { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
