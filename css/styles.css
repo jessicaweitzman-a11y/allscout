@@ -813,6 +813,60 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
   .form-row-2 { grid-template-columns:1fr; }
 }
 
+/* ---- MOBILE (≤ 640px) ---- */
+@media (max-width:640px) {
+  /* Hero */
+  .hero { padding:110px 0 60px; }
+  .hero-layout { min-height:auto; gap:32px; }
+  .hero h1 { letter-spacing:-1px; }
+  .hero-sub { font-size:15px; }
+  .hero-actions .btn { padding:11px 20px; font-size:14px; }
+  .store-badges { gap:10px; }
+
+  /* Sections */
+  .agent-section { padding:70px 0; }
+  .how-it-works  { padding:70px 0; }
+  .alerts-section { padding:70px 0; }
+  .cta-section   { padding:70px 0; }
+  .features      { padding:70px 0; }
+
+  /* Inner page hero */
+  .page-hero { padding:110px 0 50px; }
+  .page-hero h1 { font-size:clamp(28px,8vw,42px); }
+  .page-hero p  { font-size:16px; }
+
+  /* About page */
+  .about-mission { padding:60px 0; }
+  .about-values  { padding:60px 0; }
+  .about-team    { padding:60px 0; }
+
+  /* Pricing page */
+  .pricing-section { padding:40px 0 70px; }
+  .faq-section     { padding:50px 0 70px; }
+
+  /* Section headings */
+  .section-title { font-size:clamp(24px,7vw,36px); }
+  .section-sub   { font-size:15px; }
+
+  /* How it works steps */
+  .hiw-intro { font-size:15px; margin:16px 0 28px; }
+
+  /* Alert chips — tighten on small screens */
+  .alert-chip { padding:12px 14px; gap:12px; }
+  .alert-chip-icon { width:36px; height:36px; font-size:16px; }
+  .alert-chip-text strong { font-size:14px; }
+  .alert-chip-text span   { font-size:12px; }
+
+  /* CTA box */
+  .cta-box { padding:48px 20px; }
+
+  /* Contact form */
+  .form-card { padding:28px 20px; }
+
+  /* Footer */
+  footer { padding:48px 0 24px; }
+}
+
 /* ---- TYPEWRITER CURSOR (via ::after on #typeTarget) ---- */
 @keyframes blink {
   0%, 100% { opacity: 1; }
