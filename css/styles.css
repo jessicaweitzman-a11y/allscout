@@ -226,7 +226,7 @@ nav.scrolled {
   transition: background .2s, border-color .2s;
 }
 .store-badge:hover { background:rgba(255,255,255,0.11); border-color:rgba(255,255,255,0.22); }
-.store-badge-icon { font-size:20px; }
+.store-badge-icon { display:flex; align-items:center; }
 .store-badge-text { display:flex; flex-direction:column; line-height:1.2; }
 .store-badge-text small { font-size:11px; color:var(--text-muted); }
 .store-badge-text strong { font-size:14px; color:var(--text); }
