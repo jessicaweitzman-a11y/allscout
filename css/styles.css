@@ -615,6 +615,12 @@ nav.scrolled {
   background:rgba(91,76,255,0.15); border:1px solid rgba(91,76,255,0.25);
   display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;
 }
+.alert-chip-icon-img {
+  overflow:hidden; padding:0; background:none; border-color:var(--border);
+}
+.alert-chip-icon-img img {
+  width:100%; height:100%; object-fit:cover; display:block;
+}
 .alert-chip-text { flex:1; }
 .alert-chip-text strong { display:block; font-size:15px; font-weight:600; color:var(--text); }
 .alert-chip-text span { font-size:13px; color:var(--text-muted); }
