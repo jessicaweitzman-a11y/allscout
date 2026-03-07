@@ -346,8 +346,10 @@ nav.scrolled {
 }
 @media (max-width: 640px) {
   .ring-split { grid-template-columns: 1fr; gap: 32px; }
-  .ring-logo-wrap { justify-content: flex-start; }
+  .ring-logo-wrap { justify-content: center; }
   .ring-section { padding: 60px 0; }
+  .ring-text h2 { white-space: normal; font-size: 22px; }
+  .ring-text p { white-space: normal; font-size: 14px; }
 }
 .ring-flow {
   display: flex;
