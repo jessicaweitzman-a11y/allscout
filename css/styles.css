@@ -339,7 +339,6 @@ nav.scrolled {
 .ring-logo-wrap img {
   height: 156px;
   width: auto;
-  filter: invert(1) brightness(0.2);
 }
 @media (max-width: 640px) {
   .ring-split { grid-template-columns: 1fr; gap: 32px; }
