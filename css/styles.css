@@ -632,7 +632,8 @@ nav.scrolled {
   transition: border-color .3s, background .3s;
 }
 .alert-chip:hover { border-color:rgba(91,76,255,0.35); background:rgba(91,76,255,0.05); }
-.alert-chip-cta { font-size:12px !important; padding:7px 14px !important; flex-shrink:0; }
+.alert-chip-cta { font-size:12px; font-weight:600; padding:3px 10px; border-radius:100px; flex-shrink:0; background:rgba(38,185,249,0.12); color:var(--cyan); border:1px solid rgba(38,185,249,0.25); text-decoration:none; transition:background .2s, border-color .2s; }
+.alert-chip-cta:hover { background:rgba(38,185,249,0.22); border-color:rgba(38,185,249,0.45); }
 .alert-chip-icon {
   width:42px; height:42px; border-radius:50%;
   background:rgba(91,76,255,0.15); border:1px solid rgba(91,76,255,0.25);
