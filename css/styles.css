@@ -312,9 +312,9 @@ nav.scrolled {
 .ring-split {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 40%;
+  gap: 32px;
 }
+.ring-text { flex: 0 0 calc(50% + 4px); }
 .ring-text h2 {
   font-size: clamp(26px, 3.2vw, 42px);
   font-weight: 700;
@@ -334,6 +334,7 @@ nav.scrolled {
   align-items: center;
   justify-content: flex-start;
   opacity: 0.75;
+  flex-shrink: 0;
 }
 .ring-logo-wrap img {
   height: 156px;
