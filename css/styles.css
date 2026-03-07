@@ -500,9 +500,9 @@ nav.scrolled {
 .hiw-step { display: flex; align-items: flex-start; gap: 18px; }
 .hiw-step-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
 .hiw-step-num {
-  width: 36px; height: 36px;
+  width: 28px; height: 28px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; font-weight: 700;
+  font-size: 12px; font-weight: 700;
   color: var(--purple);
   background: rgba(91,76,255,0.1);
   border: 1.5px solid rgba(91,76,255,0.35);
