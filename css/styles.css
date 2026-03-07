@@ -305,9 +305,9 @@ nav.scrolled {
 /* ---- RING SECTION ---- */
 .ring-section {
   padding: 100px 0;
-  background: var(--bg-2);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--lt);
+  border-top: 1px solid var(--lt-border);
+  border-bottom: 1px solid var(--lt-border);
 }
 .ring-header {
   text-align: center;
@@ -319,10 +319,11 @@ nav.scrolled {
   line-height: 1.12;
   letter-spacing: -0.5px;
   margin-bottom: 14px;
+  color: var(--lt-text);
 }
 .ring-header p {
   font-size: 17px;
-  color: var(--text-muted);
+  color: var(--lt-muted);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.75;
