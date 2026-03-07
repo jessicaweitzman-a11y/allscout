@@ -496,18 +496,26 @@ nav.scrolled {
   margin: 24px 0 40px;
   max-width: 480px;
 }
-.hiw-steps { display: flex; flex-direction: column; gap: 28px; }
+.hiw-steps { display: flex; flex-direction: column; gap: 0; }
 .hiw-step { display: flex; align-items: flex-start; gap: 18px; }
+.hiw-step-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
 .hiw-step-num {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
   color: var(--purple);
   background: rgba(91,76,255,0.1);
-  border: 1px solid rgba(91,76,255,0.22);
-  border-radius: 8px;
-  padding: 4px 10px;
+  border: 1.5px solid rgba(91,76,255,0.35);
+  border-radius: 50%;
   flex-shrink: 0;
-  margin-top: 3px;
 }
+.hiw-step-line {
+  width: 2px; flex: 1; min-height: 32px;
+  background: linear-gradient(to bottom, rgba(91,76,255,0.35), rgba(91,76,255,0.1));
+  margin: 4px 0;
+}
+.hiw-step > div:last-child { padding-bottom: 32px; padding-top: 6px; }
+.hiw-step:last-child > div:last-child { padding-bottom: 0; }
 .hiw-step h3 { font-size: 16px; font-weight: 700; color: var(--lt-text); margin-bottom: 5px; }
 .hiw-step p  { font-size: 15px; color: var(--lt-muted); line-height: 1.7; }
 
