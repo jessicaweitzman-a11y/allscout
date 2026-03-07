@@ -604,6 +604,7 @@ nav.scrolled {
   background:var(--bg-card); border:1px solid var(--border);
   border-radius:16px; padding:28px 24px;
   transition: border-color .3s, background .3s;
+  display:flex; flex-direction:column;
 }
 .alert-box:hover { border-color:rgba(91,76,255,0.35); background:rgba(91,76,255,0.05); }
 .alert-box-icon {
@@ -614,6 +615,7 @@ nav.scrolled {
 }
 .alert-box h3 { font-size:16px; font-weight:700; color:var(--text); margin-bottom:8px; }
 .alert-box p { font-size:14px; color:var(--text-muted); line-height:1.6; margin:0; }
+.alert-box-btn { margin-top:20px; font-size:13px; padding:9px 18px; align-self:flex-start; }
 
 .alert-chip {
   display:flex; align-items:center; gap:16px;
