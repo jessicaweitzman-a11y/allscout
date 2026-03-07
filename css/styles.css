@@ -514,7 +514,8 @@ nav.scrolled {
   background: linear-gradient(to bottom, rgba(91,76,255,0.35), rgba(91,76,255,0.1));
   margin: 4px 0;
 }
-.hiw-step > div:last-child { padding-bottom: 32px; padding-top: 6px; }
+.hiw-step > div:last-child { padding-bottom: 32px; padding-top: 4px; }
+.hiw-step-num { margin-top: 0; }
 .hiw-step:last-child > div:last-child { padding-bottom: 0; }
 .hiw-step h3 { font-size: 16px; font-weight: 700; color: var(--lt-text); margin-bottom: 5px; }
 .hiw-step p  { font-size: 15px; color: var(--lt-muted); line-height: 1.7; }
