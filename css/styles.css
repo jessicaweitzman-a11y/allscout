@@ -312,7 +312,7 @@ nav.scrolled {
 .ring-split {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 60px;
+  gap: 24px;
   align-items: center;
 }
 .ring-text h2 {
@@ -336,7 +336,7 @@ nav.scrolled {
   opacity: 0.75;
 }
 .ring-logo-wrap img {
-  height: 52px;
+  height: 156px;
   width: auto;
   filter: invert(1) brightness(0.2);
 }
