@@ -303,7 +303,7 @@ nav.scrolled {
 
 /* ---- RING SECTION ---- */
 .ring-section {
-  padding: 80px 0;
+  padding: 30px 0;
   background: var(--lt);
   border-top: 1px solid var(--lt-border);
   border-bottom: 1px solid var(--lt-border);
@@ -313,7 +313,7 @@ nav.scrolled {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 40px;
+  gap: 20px;
 }
 .ring-text h2 {
   font-size: clamp(26px, 3.2vw, 42px);
