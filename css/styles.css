@@ -235,23 +235,17 @@ nav.scrolled {
 .phone-mockup {
   position:absolute;
   width:240px;
-  background:#1a1a2a;
-  border-radius:38px;
-  box-shadow:0 32px 80px rgba(0,0,0,0.6);
+  background:none;
+  border-radius:0;
+  box-shadow:none;
   overflow:hidden;
 }
 .phone-mockup::before {
-  content:'';
-  display:block;
-  width:80px; height:26px;
-  background:#000;
-  border-radius:0 0 14px 14px;
-  margin:0 auto 0;
-  position:relative; z-index:2;
+  display:none;
 }
 .phone-mockup img {
   width:100%; display:block;
-  margin-top:-26px; /* overlap notch */
+  border-radius:12px;
 }
 .phone-mockup.back {
   left:0; top:40px;
