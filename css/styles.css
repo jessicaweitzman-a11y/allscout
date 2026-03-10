@@ -713,7 +713,7 @@ nav.scrolled {
 }
 
 @media (max-width:860px) {
-  .alerts-layout { grid-template-columns:1fr; }
+  .alerts-layout { grid-template-columns:1fr; margin-top:24px; }
   .alerts-phone { display:none; }
   .alerts-grid { grid-template-columns:repeat(2,1fr); }
 }
