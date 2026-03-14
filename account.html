@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — AllScout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #07070f;
+      --bg-card: rgba(255,255,255,0.04);
+      --purple: #5B4CFF;
+      --cyan: #26B9F9;
+      --gradient: linear-gradient(135deg, #26B9F9 0%, #5B4CFF 100%);
+      --text: #ffffff;
+      --text-muted: rgba(255,255,255,0.55);
+      --border: rgba(255,255,255,0.08);
+      --border-2: rgba(255,255,255,0.14);
+    }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- HEADER ---- */
+    .account-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .account-header img { height: 28px; width: auto; }
+
+    /* ---- MAIN ---- */
+    .account-main {
+      flex: 1;
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .account-title {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 32px;
+    }
+
+    /* ---- CARD ---- */
+    .account-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-2);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .account-card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Profile */
+    .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .profile-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #26B9F9, #5B4CFF);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: #fff;
+      flex-shrink: 0;
+    }
+    .profile-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .profile-email {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Plan */
+    .plan-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .plan-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .plan-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .plan-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(91,76,255,0.15);
+      color: #a99eff;
+      border: 1px solid rgba(91,76,255,0.3);
+      white-space: nowrap;
+    }
+
+    /* Credits */
+    .credits-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .credits-number {
+      font-size: 32px;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .credits-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Divider */
+    .card-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--gradient);
+      color: #fff;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-2);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.3); }
+    .btn + .btn { margin-top: 10px; }
+
+    /* ---- UPGRADE OPTIONS ---- */
+    .upgrade-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .upgrade-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-2);
+      background: var(--bg-card);
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s;
+    }
+    .upgrade-option:hover { border-color: rgba(91,76,255,0.5); }
+    .upgrade-option.recommended { border-color: rgba(91,76,255,0.4); background: rgba(91,76,255,0.06); }
+    .upgrade-option-info h4 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .upgrade-option-info p { font-size: 12px; color: var(--text-muted); }
+    .upgrade-option-price {
+      font-size: 15px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .upgrade-option-price span {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .recommended-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(91,76,255,0.2);
+      color: #a99eff;
+      border: 1px solid rgba(91,76,255,0.3);
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 480px) {
+      .account-main { padding: 32px 16px 60px; }
+      .account-title { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="account-header">
+    <img src="assets/AllSccout white.svg" alt="AllScout">
+  </header>
+
+  <main class="account-main">
+    <h1 class="account-title">My Account</h1>
+
+    <!-- Profile -->
+    <div class="account-card">
+      <div class="account-card-label">Profile</div>
+      <div class="profile-row">
+        <div class="profile-avatar" id="avatarInitials">JD</div>
+        <div>
+          <div class="profile-name" id="profileName">Jane Doe</div>
+          <div class="profile-email" id="profileEmail">jane@example.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Plan & Credits -->
+    <div class="account-card">
+      <div class="account-card-label">Current Plan</div>
+      <div class="plan-row">
+        <div class="plan-info">
+          <h3 id="planName">AllScout Basic</h3>
+          <p>Renews monthly</p>
+        </div>
+        <span class="plan-badge" id="planBadge">Basic</span>
+      </div>
+      <hr class="card-divider">
+      <div class="credits-row">
+        <div>
+          <div class="credits-number" id="creditsCount">1,840</div>
+          <div class="credits-label">credits remaining this month</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upgrade Plan -->
+    <div class="account-card">
+      <div class="account-card-label">Upgrade Plan</div>
+      <div class="upgrade-grid">
+        <a href="#" class="upgrade-option recommended" id="upgradeProLink">
+          <div class="upgrade-option-info">
+            <h4>AllScout Pro <span class="recommended-badge">Recommended</span></h4>
+            <p>7,000 credits/month · Unlimited cameras</p>
+          </div>
+          <div class="upgrade-option-price">$6.99 <span>/mo</span></div>
+        </a>
+        <a href="#" class="upgrade-option" id="upgradeMaxLink">
+          <div class="upgrade-option-info">
+            <h4>AllScout Max</h4>
+            <p>15,000 credits/month · Unlimited cameras · Data Summary</p>
+          </div>
+          <div class="upgrade-option-price">$13.99 <span>/mo</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Top-up -->
+    <div class="account-card">
+      <div class="account-card-label">One-time Top-up</div>
+      <div class="plan-row" style="margin-bottom:16px;">
+        <div class="plan-info">
+          <h3>1,000 credits</h3>
+          <p>Added instantly to your account</p>
+        </div>
+        <span class="plan-badge" style="background:rgba(38,185,249,0.1);color:#26B9F9;border-color:rgba(38,185,249,0.25);">One-time</span>
+      </div>
+      <a href="#" class="btn btn-outline" id="topupLink">Buy 1,000 credits →</a>
+    </div>
+
+  </main>
+
+  <script>
+    // ── Placeholder: replace with Zitadel token parsing ──
+    const user = {
+      name: 'Jane Doe',
+      email: 'jane@example.com',
+      plan: 'basic',        // 'basic' | 'pro' | 'max'
+      credits: 1840
+    };
+
+    const planLabels = { basic: 'AllScout Basic', pro: 'AllScout Pro', max: 'AllScout Max' };
+    const planBadgeLabels = { basic: 'Basic', pro: 'Pro', max: 'Max' };
+
+    document.getElementById('profileName').textContent = user.name;
+    document.getElementById('profileEmail').textContent = user.email;
+    document.getElementById('avatarInitials').textContent = user.name.split(' ').map(n => n[0]).join('').toUpperCase();
+    document.getElementById('planName').textContent = planLabels[user.plan];
+    document.getElementById('planBadge').textContent = planBadgeLabels[user.plan];
+    document.getElementById('creditsCount').textContent = user.credits.toLocaleString();
+
+    // ── Placeholder: replace with Stripe Payment Links ──
+    document.getElementById('upgradeProLink').href = 'https://buy.stripe.com/5kQcN53oqbcOdW77Zh4wM01';
+    document.getElementById('upgradeMaxLink').href = 'https://buy.stripe.com/9B63cv4su94G19l1AT4wM02';
+    document.getElementById('topupLink').href = 'https://buy.stripe.com/5kQ4gz6AC1CecS37Zh4wM00';
+
+    // Hide upgrade options already on or above current plan
+    if (user.plan === 'pro') document.getElementById('upgradeProLink').style.display = 'none';
+    if (user.plan === 'max') {
+      document.getElementById('upgradeProLink').style.display = 'none';
+      document.getElementById('upgradeMaxLink').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
