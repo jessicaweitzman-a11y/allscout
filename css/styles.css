@@ -644,7 +644,7 @@ nav.scrolled {
 .alerts-section { padding:120px 0; background:var(--bg); }
 .alerts-layout {
   display:grid; grid-template-columns:1fr 1fr;
-  gap:72px; align-items:end; margin-top:-40px;
+  gap:72px; align-items:end; margin-top:40px;
 }
 .alerts-chips {
   display:flex; flex-direction:column; gap:14px;
